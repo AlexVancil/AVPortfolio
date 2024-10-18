@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    margin: 0;
+    background: linear-gradient(#2573c1, #2e488a);
+    height: 100%;
+}
+
+header{
+    background:#3e281c;
+    margin: 0;
+    padding: 1em;
+}
+header ul{
+    display: flex;
+    justify-content: left;
+}
+header li{
+    list-style-type: none;
+    margin-right: 5%;
+}
+header button{
+    font-size: 1.3em;
+    font-family: 'Sen';
+    padding: 1em;
+    border-radius: 2em;
+    border: none;
+    background: #ffce5a00;
+    color: #FFCD5A;
+    transition: all .1s ease-in-out;
+}
+header button:hover{
+    scale: 110%;
+    border-radius: 1em;
+    background: #FFCD5A;
+    color: #a81111;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+.home button{
+    color: #a81111;
+    background: #ffe8b2;
+}
+header img{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 200px;
+}
+
+/* header will be consistent through every file */
+
+main{
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font-family: 'sen';
+    font-size: 3em;
+    color: #FFCD5A;
+}
+h2{
+    text-align: center;
+    font-family: 'sen';
+    font-size: 1.5em;
+    color: #ffe8b2;
+    font-weight: normal;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+}
+.portrait{
+    width: 50%;
+    max-width: 500px;
+}
+
+.socials{
+    display: flex;
+    list-style-type: none;
+}
+
+.socials img{
+    width: 50px;
+    padding: 1em;
+    background: #FFCD5A;
+    border-radius: 1em;
+}
+.socials li{
+    margin-right: 10%;
+}
+.socials li:hover{
+    scale: 105%;
+}
+.socials li:active{
+    scale: 95%;
+    filter: brightness(.5);
+}
+
+.contactsbottom li{
+    list-style-type: none;
+    font-size: 2em;
+    font-family: 'inter';
+    color: #FFCD5A;
+}
+b{
+    font-weight: normal;
+    color: #ffe8b2;
+}
+
+footer{
+    background:#3e281c;
+    padding: 3px;
+    margin: 0;
+}
+footer p{
+    font-size: 1em;
+    text-align: left;
+    font-family: 'inter';
+    color: #ffe8b2;
+}
+
+.smallonly{
+    display: none;
+}
+
+@media (max-width: 1200px){  
+    .bigonly{
+        display: none;
+    }
+    .smallonly{
+        display: flex;
+        justify-content: space-around;
+    }
+    header img{
+        position: static;
+        width: 100%;
+        max-width: 200px;
+    }
+    .home{
+        position: relative;
+        top: 50px;
+    }
+    .dropdown_menu{
+        position: absolute;
+        top: 200px;
+        background: #3e281c;
+        transition: all .3s ease-in;
+        display: none;
+    }
+    input{
+        opacity: 0%;
+    }
+    .dropdown{
+        width: 150px;
+        height: 150px;
+        background: url('./Icon_Menu.svg');
+        position: relative;
+        top: 30px;
+    }
+    .dropdown:hover{
+        scale: 105%;
+        cursor: pointer;
+    }
+    .dropdown:has(input:checked) + .dropdown_menu{
+        display: block;
+        right: 0px;
+        transition: all .3s ease-in;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger li{
+        margin-right: 0%;
+    }
+
+    /* Above Code applies to all sub-pages' headers */
+
+    main{
+        width: 90%;
+        margin: auto;
+        padding-bottom: 3em;
+    }
+    .bio img{
+        width: 100%;
+        max-width: 300px;
+        border: 2px solid #FFCD5A;
+        border-radius: 2em;
+        transition: all .1s ease-in-out;
+        margin: auto;
+    }
+    .bio img:hover{
+        scale: 105%;
+        border-radius: 1em;
+        transition: all .1s ease-in-out;
+    }
+    .bio p{
+        width: auto;
+        margin-left: 2em;
+    }
+    .bio{
+        display: grid;
+        justify-content: center;
+    }
+    footer p{
+        font-size: 1em;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+    }
+
+    .middle{
+        display: grid;
+    }
+    .portrait{
+        width: 100%;
+    }
+    ul p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    .home{
+        display: none;
+    }
+    .socials{
+        width: 50%;
+    }
+    ul p{
+        font-size: .9em;
+    }
+}
